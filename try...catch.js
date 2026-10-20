@@ -6,3 +6,9 @@ try {
 } catch (error) {
   console.log("Something went wrong");
 }
+//Let's use an actual error:
+try {
+  JSON.parse("{invalid json}");
+} catch (error) {
+  console.log("Invalid JSON");
+}
