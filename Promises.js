@@ -47,3 +47,16 @@ order
 const result = new Promise((resolve, reject) => {
   resolve("Success");
 });
+
+//Practical Promise with a delay
+function getData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data received");
+    }, 2000);
+  });
+}
+
+getData().then((data) => {
+  console.log(data);
+});
