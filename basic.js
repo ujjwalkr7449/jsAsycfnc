@@ -7,4 +7,4 @@ function sayWelcome() {
   console.log("Welcome to JavaScript!");
 }
 
-greet("Ujjwal", sayWelcome);git 
+greet("Ujjwal", sayWelcome); 
