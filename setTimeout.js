@@ -14,3 +14,16 @@ setTimeout(() => {
 }, 0);
 
 console.log("C");
+
+//Event loop example
+console.log("1");
+
+setTimeout(() => {
+  console.log("2");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("3");
+});
+
+console.log("4");
