@@ -42,3 +42,8 @@ order
   .catch((error) => {
     console.log(error);
   });
+
+//How resolve() and reject() work
+const result = new Promise((resolve, reject) => {
+  resolve("Success");
+});
