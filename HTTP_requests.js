@@ -21,3 +21,20 @@ async function getPosts() {
 }
 
 getPosts();
+
+// Axios: Axios is a separate HTTP client library. Install it in your project:npm install axios
+import axios from "axios";
+
+async function getPosts() {
+  try {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+
+    console.log(response.data);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getPosts();
