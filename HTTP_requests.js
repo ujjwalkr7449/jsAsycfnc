@@ -38,3 +38,27 @@ async function getPosts() {
 }
 
 getPosts();
+
+
+//C. XMLHttpRequest : This is an older browser API that supports asynchronous HTTP requests.
+const xhr = new XMLHttpRequest();
+
+xhr.open(
+  "GET",
+  "https://jsonplaceholder.typicode.com/posts/1",
+  true
+);
+
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    console.log(JSON.parse(xhr.responseText));
+  } else {
+    console.log("Request failed:", xhr.status);
+  }
+};
+
+xhr.onerror = function () {
+  console.log("Network error");
+};
+
+xhr.send();
